@@ -1,0 +1,132 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity" >
+
+    <TextView
+        android:id="@+id/textTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:text="Remote Music Controller"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textTitle"
+        android:layout_centerHorizontal="true"
+        android:fitsSystemWindows="true"
+        android:gravity="center"
+        android:textAlignment="center"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textColor="#FFFFFF" />
+
+    <Button
+        android:id="@+id/buttonMute"
+        style="@style/ButtonText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/green_btn"
+        android:enabled="false"
+        android:text="Mute"
+        android:textSize="15dp" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true" >
+
+        <Button
+            android:id="@+id/buttonNext"
+            style="@style/ButtonText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@+id/buttonPlay"
+            android:background="@drawable/green_btn"
+            android:enabled="false"
+            android:text="Next"
+            android:textSize="25dp" />
+
+        <Button
+            android:id="@+id/buttonPrev"
+            style="@style/ButtonText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/buttonPlay"
+            android:background="@drawable/green_btn"
+            android:enabled="false"
+            android:text="Prev"
+            android:textSize="25dp" />
+
+        <Button
+            android:id="@+id/buttonPlay"
+            style="@style/ButtonText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/buttonPause"
+            android:layout_alignRight="@+id/buttonPause"
+            android:layout_marginTop="33dp"
+            android:background="@drawable/green_btn"
+            android:enabled="false"
+            android:text="Play"
+            android:textSize="25dp" />
+
+        <Button
+            android:id="@+id/buttonPause"
+            style="@style/ButtonText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/buttonNext"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/green_btn"
+            android:enabled="false"
+            android:text="Pause"
+            android:textSize="25dp" />
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/buttonVolUp"
+        style="@style/ButtonText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/buttonMute"
+        android:layout_alignBottom="@+id/buttonMute"
+        android:layout_alignRight="@+id/relativeLayout1"
+        android:background="@drawable/green_btn"
+        android:enabled="false"
+        android:text="Vol. +"
+        android:textSize="15dp" />
+
+    <Button
+        android:id="@+id/buttonVolDown"
+        style="@style/ButtonText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/buttonMute"
+        android:layout_alignBottom="@+id/buttonMute"
+        android:layout_alignLeft="@+id/relativeLayout1"
+        android:background="@drawable/green_btn"
+        android:enabled="false"
+        android:text="Vol. -"
+        android:textSize="15dp" />
+
+</RelativeLayout>
